@@ -41,7 +41,7 @@ a {
   --header-font-weight: 600;
   --header-line-height: 90%;
 
-  --figure-side-margin: 80px;
+  --figure-side-margin: 72px;
 
   --hover-text-decoration-color: rgba(49, 42, 78, 0.5);
   --themedark-hover-text-decoration-color: rgba(179, 179, 179, 0.5);
@@ -110,7 +110,7 @@ a:active {
   align-items: center;
   border-width: 1px 0px;
   border-style: solid;
-  border-color: var(--text-color, #312A4E);
+  border-color: currentColor;
 }
 
 .header__theme-toggler {
@@ -214,19 +214,24 @@ a:active {
 
 .content__figure {
   margin: 7% 0;
-  width: max(100vi, calc(100vi - var(--figure-side-margin, 80px) * 2));
+  width: max(100vi, calc(100vi - var(--figure-side-margin, 72px) * 2));
+}
+
+.content__figure-picture {
+  display: inline-block;
+  width: inherit;
 }
 
 .content__picture {
   width: inherit;
   position: relative;
-  left: calc(-1 * var(--figure-side-margin, 80px));
+  left: calc(-1 * var(--figure-side-margin, 72px));
 }
 
 .content__picture-caption {
   text-align: center;
   padding: 20px 0px;
-  border-bottom: 1px solid var(--text-color, #312A4E);
+  border-bottom: 1px solid currentColor;
   margin-left: calc(-1 * (100vi / 10));
 }
 
@@ -316,7 +321,7 @@ a:active {
   align-items: center;
   padding: 2.5%;
   margin-top: 10%;
-  border-top: 1px solid var(--text-color, #312A4E);
+  border-top: 1px solid currentColor;
 }
 
 .footer__copyright {
